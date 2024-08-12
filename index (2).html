@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raquel_Castilheiro</title>
+    <style>
+    body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:rgb(212, 211, 220);
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 100;
+        }
+     h1{
+        background: rgb(151, 175, 190);
+        color: #21317d;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        }
+     h2{
+        background: rgb(151, 190, 152);
+        color: #217d4a;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+       }
+       h4{
+        color: #000000;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+       }
+       p{
+        align-items: center;
+        max-width: 900px;
+        margin:80;
+       }
+       .imagem{
+        align-items: center;
+       }
+
+    </style>
+    
+</head>
+<body>
+    <h1>Os quatro pilares da Programação Orientada a Objeto (POO)</h1>
+
+    <p>Olá! Aqui você irá aprender sobre os quatro pilares da Programação Orientada a Objeto. Vamos começar?</p>
+
+    <div class="imagem">
+        <img src="D:\imagens\img.jpg" alt="Os quatro pilares da POO"> <br>
+    </div>
+
+    <h2>Encapsulamento</h2>
+    <p>Quando transformamos um procedimento que apresenta muitas regras de negócio ou rotinas complexas em um método, chamamos isso de encapsulamento. Esse é um processo de esconder todos os detalhes de um objeto que não contribuem para as suas características essenciais.</p>
+    <p>Se existem partes essenciais num objeto, podemos dizer que eles possuem uma parte interna, que são os dados (que não podem ser acessados por outros objetos do sistema) e outra externa, que são os métodos (que permitem a alteração ou verificação de seu estado).
+        Um donut, por exemplo, pode representar o objeto. Não se pode chegar a seu recheio (dados) sem passar por sua massa (métodos).
+    </p>
+    <p>Para fazer o encapsulamento, é necessário declarar os atributos de uma classe como "private". Por exemplo, se você tem uma classe "Pessoa", seu atributo "Nome" deve ser declarado como private, caso queira encapsulá-lo.</p>
+    
+        <h4>Exemplo:</h4>
+
+        <p>class Pessoa { <br>
+            private: <br>
+            string nome; <br>
+            //… <br>
+            }; <br>
+        </p>
+    
+        <p><b>Mas o que são classes, atributos, objetos e métodos?</b> Objetos representam "coisas" do mundo real ou do domínio de algum problema (exemplo: o carro na garagem). <br>
+            As classes representam todos os tipos de objetos (exemplo: classe carro). <br>
+            Os atributos são as características gerais definidas em uma classe, como cor, tamanho, nome, ordem, entre outros. <br>
+            Já os métodos são sub-rotinas que são executadas por um objeto ao receber uma mensagem. Eles determinam o comportamento dos objetos de uma classe em uma programação. Podemos dizer que um carro é um objeto, onde suas características são seus atributos (dados atrelados ao objeto) e seus comportamentos são ações ou métodos.<br>
+        </p> <br>
+        
+        <p>De volta ao encapsulamento, para acessar os atributos e os métodos encapsulados é preciso usar métodos públicos chamados getters e setters, que permitem acessar e modificar os atributos encapsulados de forma controlada. Por exemplo, na classe “Pessoa” com o atributo “Nome” encapsulado, pode-se criar métodos públicos “getNome” e “setNome” para acessar e modificar esse atributo. </p><br>
+            <h4>Exemplo:</h4>
+            <p>class Pessoa { <br>
+            private: <br>
+            string nome; <br>
+            void setNome(string nome); <br>
+            public: <br>
+            string getNome(); <br>
+            void setNome(string nome); <br>
+            //… <br>
+            }; 
+            </p><br><br>
+    
+        <h4>Importância e benefícios do encapsulamento</h4>
+        <p>O encapsulamento oferece vários benefícios, como proteção de dados, modificabilidade, reutilização de código, testabilidade e segurança. Ele permite que os detalhes de implementação de um objeto sejam alterados sem afetar o restante do sistema, tornando o código mais flexível e fácil de manter. Com isso, os objetos podem ser reutilizados em diferentes partes do sistema sem que haja preocupação com os detalhes de implementação, além de terem as informações protegidas de acessos indesejados ou de modificações acidentais.</p> 
+
+        <h2>Herança</h2>
+        <p>Herança é o mecanismo que permite criar uma nova classe baseada em uma classe existente. A nova classe (classe derivada ou subclasse) herda atributos e métodos da classe existente (classe base ou superclasse), podendo adicionar novos atributos e métodos ou modificar os existentes. Aqui você pode ter se confundido com encapsulamento, mas não se preocupe. Ao longo do conteúdo você poderá esclarecer melhor, além de poder conferir as dúvidas frequentes ao final do conteúdo.</p>
+        <p>Como exemplo, podemos ter uma superclasse Animal e duas subclasses Gato e Cachorro. </p>
+
+        <div class="imagem">
+        <img src="D:\imagens\img3.png" width="300">
+        </div>
+
+        <p>As classes Gato e Cachorro são subclasses da classe Animal e por isso elas herdam os atributos e método da sua superclasse.</p>
+
+            <h4>Exemplo em java:</h4>
+                <p>public class Animal { <br>
+                    public void comer() { <br>
+                        System.out.println("Animal está comendo"); <br>
+                    } <br>
+                } <br>
+                
+                public class Cachorro extends Animal { <br>
+                    public void latir() { <br>
+                        System.out.println("Cachorro está latindo"); <br>
+                    } <br>
+                } <br>
+            </p>
+        
+        <h4>Importância e benefícios da herança</h4>
+        <p>Com a herança, é possível reutilizar um código já existente em uma nova classe. Também, ela facilita a adição de novas funcionalidades com base nas que já estavam implementadas.
+        </p>
+
+        <h2>Polimorfismo</h2>
+        <p>Com polimorfismo, um objeto pode ser tratado de diferentes formas dependendo do contexto. Em POO, isso geralmente se refere à capacidade de um método de se comportar de diferentes maneiras com base no objeto que o convoca. Em outras palavras, é um princípio onde as classes derivadas de uma única classe base são capazes de invocar os métodos que, embora apresentem a mesma assinatura, comportam-se de maneira diferente para cada uma das classes derivadas. Assim como uma ferramenta pode ter diferentes funções dependendo de como é usada, métodos polimórficos podem se comportar de formas diferentes dependendo do objeto.</p>
+        <h4>Exemplo:</h4>
+
+        <div class="imagem">
+        <img src="https://dhg1h5j42swfq.cloudfront.net/2023/07/24211159/image-346.png" width="400">
+        </div>
+        
+        <p>public class Animal { <br>
+            public void fazerSom() { <br>
+                System.out.println("Animal faz um som"); <br>
+            } <br>
+        } <br>
+        
+        public class Cachorro extends Animal { <br>
+            public void fazerSom() { <br>
+                System.out.println("Cachorro late"); <br>
+            } <br>
+        } <br>
+        
+        public class Gato extends Animal { <br>
+            public void fazerSom() { <br>
+                System.out.println("Gato mia"); <br>
+            } <br>
+        } <br>
+        
+        public class TestePolimorfismo { <br>
+            public static void main(String[] args) { <br>
+                Animal a; <br>
+                
+                a = new Cachorro(); <br> 
+                a.fazerSom(); // Saída: Cachorro late <br>                
+                a = new Gato(); <br>
+                a.fazerSom(); // Saída: Gato mia <br>
+            } <br>
+        } <br>
+        </p><br>
+
+        <p>Aqui, o método fazerSom é polimórfico, pois seu comportamento muda conforme o tipo do objeto (Cachorro ou Gato).</p>
+        <h4>Importância e benefícios do polimorfismo</h4>
+        <p>Com o Polimorfismo, os mesmos atributos e objetos podem ser utilizados em objetos distintos, porém, com implementações lógicas diferentes. Assim, ele não só promove a reutilização de código, como também contribui para a criação de sistemas mais limpos, mais compreensíveis e mais preserváveis.</p>
+        
+        <h2>Abstração</h2>
+        <p>Na abstração, os detalhes complexos são ocultos e apenas as funcionalidades essenciais são exibidas. Consiste em esconder os detalhes de algo, no caso, os detalhes desnecessários. No mundo real, utilizamos abstrações o tempo todo. Tudo que não sabemos como funciona por baixo dos panos pode ser considerado uma abstração. Um bom exemplo é quando levamos o carro para manutenção e ele volta funcionando. Mesmo que não saibamos os processos disso, o que importa é que agora ele está funcionando.</p>
+        <p>É interessante destacar alguns pontos importantes dentro da abstração. É necessário que cada objeto tenha uma identidade única, para que não haja conflito dentro do sistema, e também propriedades que os definam. Além disso, os objetos podem ter métodos que representem as ações que eles podem realizar.</p>
+        
+        <h4>Exemplo:</h4>
+
+        <div class="imagem">
+        <img src="D:\imagens\img4.png" width="350">
+        </div>
+        
+        <p>No exemplo, depositar e sacar são ações diferentes. Ao depositar, o saldo da conta é incrementado com o valor. Em contrapartida, o saldo é decrementado ao sacar determinado valor. Em ambos os casos, eles abstraem o que as outras operações realizaram no passado. Por outro lado, a consulta de saldo não movimenta a conta. Ela apenas exibe o saldo. A consulta abstrai os depósitos e saques feitos previamente. O foco é apenas mostrar o valor disponível no momento.</p>
+        <h4>Importância e benefícios da abstração</h4>
+        <p>A abstração reduz a complexidade do sistema ao ocultar detalhes internos e expor apenas o que é necessário, permite que os desenvolvedores se concentrem no que o objeto faz, em vez de como ele faz, além de criar sistemas mais organizados.</p> <br><br>
+        <p>Por hoje é só pessoal! Finalizamos por aqui com respostas à algumas perguntas frequentes acerca do conteúdo.</p> <br>
+        <h1>Perguntas frequentes</h1>
+        <h3>Encapsulamento</h3>
+        <h3>Herança</h3>
+        <h3>Polimorfismo</h3>
+        <h3>Abstração</h3>
+</body>
+</html>
